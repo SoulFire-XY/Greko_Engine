@@ -77,4 +77,11 @@ class GameObject(AbstractGameObject):
         #Removed from screen
         self.destroyed = False
 
-echo "# xyz_repo" >> README.md
+    def start(self):
+        self.started = True
+
+    def destroy(self):
+        self.destroyed = True
+
+    #Timeline Events
+    # start -> input -> update/fixed_update* -> destroy
